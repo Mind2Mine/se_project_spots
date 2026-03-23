@@ -1,0 +1,108 @@
+.profile {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
+}
+
+.profile__avatar {
+  margin-right: 20px;
+  height: 190px;
+  width: 190px;
+  border-radius: 8px;
+}
+.profile__column {
+  display: flex;
+  flex-direction: column;
+}
+.profile__edit-button {
+  margin-top: auto;
+  font-size: 16px;
+  border: none;
+  background-color: transparent;
+  width: fit-content;
+  opacity: 0.7;
+}
+.profile__edit-button:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.profile__name {
+  margin: 0 0 12px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+.profile__description {
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  max-width: 420px;
+}
+.profile__new-post-button {
+  margin-left: auto;
+  width: 149px;
+  height: 52px;
+  color: white;
+  background-color: #333;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500px;
+  font-size: 16px;
+  line-height: 100%;
+  display: flex;
+  align-self: flex-end;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+}
+.profile__new-post-button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+@media screen and (max-width: 627px) {
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 12px;
+  }
+  .profile__name {
+    font-size: 20px;
+    margin-bottom: 6px;
+    max-width: 288px;
+  }
+  .profile__column {
+    margin: 0 0 20px;
+  }
+  .profile__description {
+    margin: 0 0 32px;
+    max-width: 288px;
+  }
+  .profile__new-post-button {
+    margin: 0 0 6px;
+    width: 100%;
+  }
+  .profile__edit-button {
+    margin: 0 auto;
+  }
+}

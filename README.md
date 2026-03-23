@@ -1,21 +1,41 @@
 # Project 3: Spots
 
-### Overview  
+## Project Description
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+Spots is a responsive image-sharing web application that showcases beautiful locations through interactive photo cards. Users can browse different spots, view images, and like their favorite locations. The website is designed to provide a smooth and visually appealing experience across desktop, tablet, and mobile devices.
+
+## Functionality
+
+- Browse photo cards featuring different locations
+- Like favorite spots
+- View a responsive layout that adapts to desktop, tablet, and mobile screens
+- Experience a clean and organized design
+
+## Technologies and Techniques Used
+
+- HTML5
+- CSS3
+- Flexbox
+- Grid
+- Responsive Design
+- BEM Methodology
+- Git
+- GitHub
+
+## Screenshots
+
+- Desktop view
+- Mobile view
+
+Example:
+
+![Desktop Screenshot](./images/desktop-screenshot.png)
+![Mobile Screenshot](./images/mobile-screenshot.png)
+
+## Live Project
+
+[View the project on GitHub Pages]( paste link here)
+
+## Project Pitch Video
+
+https://www.loom.com/share/fbcb2c2a98db405fb09abff81d2ce04a
