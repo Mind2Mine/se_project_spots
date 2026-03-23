@@ -29,12 +29,12 @@ Spots is a responsive image-sharing web application that showcases beautiful loc
 
 Example:
 
-![Desktop Screenshot](./images/desktop-screenshot.png)
-![Mobile Screenshot](./images/mobile-screenshot.png)
+![Desktop Screenshot](./images/Screenshot%20Spots%20Web%20Design.png)
+![Mobile Screenshot](./images/Screenshot%20spots%20mobile.png)
 
 ## Live Project
 
-[View the project on GitHub Pages]( paste link here)
+https://mind2mine.github.io/se_project_spots/
 
 ## Project Pitch Video
 
