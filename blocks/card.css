@@ -24,8 +24,10 @@
   cursor: pointer;
 }
 .card__title {
-  width: 353px;
-  height: 24px;
+  max-width: 353px;
+  line-height: 24px;
+  font-weight: 500;
+  line-height: 1.2;
   font-size: 20px;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -37,9 +39,6 @@
     height: 288px;
   }
   .card__title {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 267px;
+    width: 235px;
   }
 }
