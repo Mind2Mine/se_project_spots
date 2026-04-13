@@ -1,5 +1,9 @@
 .modal {
   visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.5s ease,
+    opacity 0.5s linear;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -10,8 +14,9 @@
   justify-content: center;
   align-items: center;
 }
-.modal__is-open {
+.modal_is-open {
   visibility: visible;
+  opacity: 1;
 }
 .modal__container {
   max-width: 730px;
