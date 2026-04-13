@@ -2,12 +2,15 @@
 
 ## Project Description
 
-Spots is a responsive image-sharing web application that showcases beautiful locations through interactive photo cards. Users can browse different spots, view images, and like their favorite locations. The website is designed to provide a smooth and visually appealing experience across desktop, tablet, and mobile devices.
+Spots is a responsive image-sharing web application that showcases beautiful locations through interactive photo cards and modals and forms. Users can browse different spots, view images, and like their favorite locations. The website is designed to provide a smooth and visually appealing experience across desktop, tablet, and mobile devices.
 
 ## Functionality
 
 - Browse photo cards featuring different locations
 - Like favorite spots
+- Open/close modals
+- Edit their profile information
+- Submit new posts (even if just logging for now)
 - View a responsive layout that adapts to desktop, tablet, and mobile screens
 - Experience a clean and organized design
 
@@ -19,6 +22,7 @@ Spots is a responsive image-sharing web application that showcases beautiful loc
 - Grid
 - Responsive Design
 - BEM Methodology
+- Java Script
 - Git
 - GitHub
 
