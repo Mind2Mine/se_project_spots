@@ -42,7 +42,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
 }
@@ -55,7 +54,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 3;
-  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
 }
@@ -93,7 +91,6 @@
     margin: 0 0 12px;
     height: 80px;
     width: 80px;
-    margin-bottom: 12px;
   }
   .profile__name {
     font-size: 20px;

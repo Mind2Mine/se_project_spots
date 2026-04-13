@@ -38,6 +38,10 @@
   background-color: transparent;
   color: #212121;
   border: none;
+  cursor: pointer;
+}
+.modal__close-button:hover {
+  opacity: 0.8;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -77,6 +81,10 @@
   height: 52px;
   max-width: 156px;
   border: none;
+  cursor: pointer;
+}
+.modal__submit-button:hover {
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 627px) {
