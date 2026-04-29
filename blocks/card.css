@@ -1,3 +1,24 @@
+.card {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.card__title {
+  max-width: 353px;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+}
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .card__image {
   height: 413px;
   width: 100%;
@@ -18,21 +39,40 @@
   border: none;
   background-color: transparent;
   opacity: 0.4;
+  background-repeat: no-repeat;
 }
+
 .card__like-button:hover {
   opacity: 1;
   cursor: pointer;
 }
-.card__title {
-  max-width: 353px;
-  font-weight: 500;
-  line-height: 1.2;
-  font-size: 20px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  margin: 0;
+.card__like-button_active {
+  background-image: url(../images/Heart_like_active.svg);
+  opacity: 1;
+  background-repeat: no-repeat;
 }
+.card__like-button_active:hover {
+  background-image: url(../images/Heart_like_active.svg);
+  opacity: 0.4;
+}
+.card__delete-button {
+  background-image: url(../images/Traah_icon.svg);
+  width: 32px;
+  height: 32px;
+  top: 12px;
+  right: 12px;
+  left: auto;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+}
+.card__delete-button:hover {
+  background-image: url(../images/Trash_hover.svg);
+  background-color: transparent;
+  opacity: 1;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 627px) {
   .card__image {
     height: 288px;
