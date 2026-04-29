@@ -73,7 +73,6 @@ function getCardElement(data) {
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
   cardDeleteButton.addEventListener("click", () => {
     cardElement.remove();
-    cardElement = null;
   });
 
   cardImageEl.addEventListener("click", () => {
@@ -122,14 +121,14 @@ function handleEditProfileSubmit(evt) {
 
 editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
-const inputValues = {
-  name: captionInput.value,
-  link: linkInput.value,
-};
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  const cardElement = getCardElement(inputValues);
-  cardsList.prepend(cardElement);
+  const cardData = {
+    name: captionInput.value,
+    link: linkInput.value,
+  };
+  const newCard = getCardElement(cardData);
+  cardsList.prepend(newCard);
 
   closeModal(newPostModal);
 }

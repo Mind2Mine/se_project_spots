@@ -74,6 +74,7 @@
   align-items: center;
   border-radius: 8px;
   border: none;
+  cursor: pointer;
 }
 .profile__new-post-button:hover {
   opacity: 0.8;

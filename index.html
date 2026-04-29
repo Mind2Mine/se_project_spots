@@ -37,7 +37,7 @@
             <template id="card-template">
               <li class="card">
                 <button class="card__delete-button" type="button"></button>
-                <img src="" alt="" class="card__image" />
+                <img src="#" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-button"></button>
@@ -47,7 +47,9 @@
           </ul>
         </section>
       </main>
-      <footer class="footer"><p class="footer__copyright">&copy; 2026 Catherine Masters</p></footer>
+      <footer class="footer page__section">
+        <p class="footer__copyright">&copy; 2026 Catherine Masters</p>
+      </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-button">
@@ -91,6 +93,7 @@
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
             </label>
             <label for="card-caption-input" class="modal__label"
@@ -100,6 +103,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -107,13 +111,12 @@
         </div>
       </div>
       <div class="modal" id="preview-modal">
-        <div class="modal__image-container_type_preview ">
+        <div class="modal__image-container modal__image-container_type_preview">
           <button type="button" class="modal__close-button"></button>
-            <img src="#" alt="" class="modal__image"/>
+          <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>
-    </div>
     </div>
     <script src="./scripts/index.js"></script>
   </body>

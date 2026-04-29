@@ -52,14 +52,13 @@
 
 .modal__title {
   width: 169px;
-  height: 32px;
   font-size: 32px;
   color: #212121;
 }
 .modal__caption {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 500;
-  width: 214px;
+  max-width: 214px;
 
   font-size: 20px;
   background-color: #212121;
