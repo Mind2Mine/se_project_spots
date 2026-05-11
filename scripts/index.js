@@ -84,12 +84,32 @@ function getCardElement(data) {
   return cardElement;
 }
 
+let activeModal = null;
+
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    closeModal(activeModal);
+  }
+}
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(activeModal);
+  }
+}
+
 function openModal(modal) {
+  activeModal = modal;
   modal.classList.add("modal_is-open");
+
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("click", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-open");
+  activeModal = null;
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("click", handleOverlayClick);
 }
 
 editProfileButton.addEventListener("click", function () {
@@ -127,12 +147,18 @@ function handleAddCardSubmit(evt) {
     name: captionInput.value,
     link: linkInput.value,
   };
-  const newCard = getCardElement(cardData);
-  cardsList.prepend(newCard);
+
+  const cardElement = getCardElement(cardData);
+  cardsList.prepend(cardElement);
+
   evt.target.reset();
+
+  const submitButton = evt.target.querySelector(settings.submitButtonSelector);
+  submitButton.disabled = true;
+  submitButton.classList.add(settings.inactiveButtonClass);
+
   closeModal(newPostModal);
 }
-
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach(function (item) {

@@ -51,7 +51,7 @@
 }
 
 .modal__title {
-  width: 169px;
+  max-width: 169px;
   font-size: 32px;
   color: #212121;
 }
@@ -103,6 +103,10 @@
   margin-top: 8px;
   color: red;
 }
+.modal__error_visible {
+  display: block;
+  color: #ff0000;
+}
 .modal__submit-button {
   background-color: black;
   color: #fff;
@@ -113,6 +117,11 @@
   max-width: 156px;
   border: none;
   cursor: pointer;
+}
+.modal__button_disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .modal__submit-button:hover {

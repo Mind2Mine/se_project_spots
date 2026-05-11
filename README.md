@@ -2,17 +2,23 @@
 
 ## Project Description
 
-Spots is a responsive image-sharing web application that showcases beautiful locations through interactive photo cards and modals and forms. Users can browse different spots, view images, and like their favorite locations. The website is designed to provide a smooth and visually appealing experience across desktop, tablet, and mobile devices.
+Spots is a responsive image-sharing web application that showcases beautiful locations through interactive photo cards and modals and forms.
+The project is built with HTML, CSS, and JavaScript, with a focus on responsive design, reusable components, form validation, and interactive UI behavior.
 
 ## Functionality
 
 - Browse photo cards featuring different locations
-- Like favorite spots
-- Open/close modals
-- Edit their profile information
-- Submit new posts (even if just logging for now)
-- View a responsive layout that adapts to desktop, tablet, and mobile screens
-- Experience a clean and organized design
+- Like and unlike photo cards
+- Delete photo cards
+- Open image previews in a modal
+- Open and close modals
+- Close modals with the Escape key
+- Close modals by clicking on the overlay
+- Edit profile name and description
+- Add new photo cards with a title and image link
+- Validate form inputs
+- Disable submit buttons when form inputs are invalid
+- View a responsive layout across desktop, tablet, and mobile screens
 
 ## Technologies and Techniques Used
 
@@ -23,6 +29,9 @@ Spots is a responsive image-sharing web application that showcases beautiful loc
 - Responsive Design
 - BEM Methodology
 - Java Script
+- DOM manipulation
+- Event listeners
+- Form validation
 - Git
 - GitHub
 
@@ -42,4 +51,4 @@ https://mind2mine.github.io/se_project_spots/
 
 ## Project Pitch Video
 
-https://www.loom.com/share/fbcb2c2a98db405fb09abff81d2ce04a
+https://www.loom.com/share/a2d8a0d4d2d747c19f4f06cae10819f7
