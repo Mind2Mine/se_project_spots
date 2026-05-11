@@ -129,7 +129,7 @@ function handleAddCardSubmit(evt) {
   };
   const newCard = getCardElement(cardData);
   cardsList.prepend(newCard);
-
+  evt.target.reset();
   closeModal(newPostModal);
 }
 
