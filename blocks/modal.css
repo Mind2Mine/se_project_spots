@@ -31,20 +31,29 @@
 }
 .modal__close-button {
   position: absolute;
-  top: 0;
-  right: -52.5px;
+  top: 32px;
+  right: 50px;
   width: 40px;
   height: 40px;
-  background: transparent url("../images/white_X.svg") center no-repeat;
-  background-color: transparent;
-  color: #212121;
+  background: url("../images/blackx.svg") center no-repeat;
   border: none;
   cursor: pointer;
   padding: 0;
   margin: 0;
+  opcaity: 0.4;
 }
+
+.modal__close-button_type_preview {
+  right: -52.5px;
+  background: transparent url("../images/white_X.svg") center no-repeat;
+}
+
 .modal__close-button:hover {
   opacity: 0.8;
+  color: #212121;
+}
+.modal__close-button_white {
+  background: transparent url("../images/white_X.svg") center no-repeat;
 }
 .modal__image-container_type_preview {
   position: relative;
