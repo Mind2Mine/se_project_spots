@@ -10,19 +10,6 @@ const api = new Api({
   },
 });
 
-api
-  .getAppInfo()
-  .then(([cards, user]) => {
-    cards.forEach(function (item) {
-      const cardElement = getCardElement(item);
-      cardsList.append(cardElement);
-    });
-    profileNameEl.textContent = user.name;
-    profileDescriptionEl.textContent = user.about;
-    profileImageAvatar.src = user.avatar;
-  })
-  .catch(console.error);
-
 const editProfileButton = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseButton = editProfileModal.querySelector(".modal__close-button");
@@ -46,6 +33,12 @@ const previewModalCloseButton = previewModal.querySelector(".modal__close-button
 const previewImageEl = previewModal.querySelector(".modal__image");
 const previewModalCaption = previewModal.querySelector(".modal__caption");
 
+const profileAvatarButton = document.querySelector(".profile__avatar-btn");
+const avatarModal = document.querySelector("#avatar-modal");
+const avatarForm = document.forms.editAvatarForm;
+const profileAvatarInput = avatarForm.elements.avatar;
+const avatarModalCloseButton = avatarModal.querySelector(".modal__close-button");
+
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
 
@@ -67,6 +60,19 @@ function getCardElement(data) {
   cardDeleteButton.addEventListener("click", () => {
     cardElement.remove();
   });
+
+  api
+    .getAppInfo()
+    .then(([cards, user]) => {
+      cards.forEach(function (item) {
+        const cardElement = getCardElement(item);
+        cardsList.append(cardElement);
+      });
+      profileNameEl.textContent = user.name;
+      profileDescriptionEl.textContent = user.about;
+      profileImageAvatar.src = user.avatar;
+    })
+    .catch(console.error);
 
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
@@ -125,6 +131,26 @@ newPostButton.addEventListener("click", function () {
 newPostModalCloseButton.addEventListener("click", function () {
   closeModal(newPostModal);
 });
+profileAvatarButton.addEventListener("click", () => {
+  openModal(avatarModal);
+});
+avatarModalCloseButton.addEventListener("click", () => {
+  closeModal(avatarModal);
+});
+
+avatarForm.addEventListener("submit", handleAvatarSubmit);
+
+function handleAvatarSubmit(evt) {
+  evt.preventDefault();
+
+  api
+    .editAvatarInfo({ avatar: profileAvatarInput.value })
+    .then((data) => {
+      profileImageAvatar.src = data.avatar;
+      closeModal(avatarModal);
+    })
+    .catch(console.error);
+}
 
 function handleEditProfileSubmit(evt) {
   evt.preventDefault();
