@@ -27,10 +27,12 @@
             />
             <button class="profile__avatar-btn">
               <img
-                src="<%=require('./images/editavatarbtn.svg')%>"
+                src="<%=require('./images/editavatar.svg')%>"
                 alt="profile-edit"
                 class="profile__edit-avatar"
+                placeholder="Paste the link to an image"
               />
+              Edit avatar
             </button>
           </div>
           <div class="profile__column">
@@ -142,28 +144,34 @@
         </div>
       </div>
       <div class="modal" id="avatar-modal">
-        <div class="modal__image-container modal__image-container_type_preview">
-          <button type="button" class="modal__close-button modal__close-button_white"></button>
-          <img src="#" alt="" class="modal__image" />
-          <p class="modal__caption"></p>
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h3 class="modal__title">Edit profile avatar</h3>
+          <form class="modal__form" name="editAvatarForm">
+            <label for="profile-avatar-input" class="modal__label"
+              >Profile Picture
+              <input
+                id="profile-avatar-input"
+                type="url"
+                class="modal__input"
+                name="avatar"
+                placeholder="Paste the link to an image"
+                required
+              />
+              <span id="profile-avatar-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-button">Save</button>
+          </form>
         </div>
-        <h3 class="modal__title">Edit Avatar</h3>
-        <form class="modal__form" name="editAvatarForm">
-          <label for="profile-avatar-input" class="modal__label"
-            >Avatar
-            <input
-              id="profile-avatar-input"
-              type="url"
-              class="modal__input"
-              name="avatar"
-              placeholder="Avatar goes here"
-              required
-            />
-            <span id="profile-avatar-input-error" class="modal__error"></span>
-          </label>
-          <button type="submit" class="modal__submit-button">Save</button>
-        </form>
-      </div>
+        <div class="modal modal_is-opened" id="delete-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-button"></button>
+          <h3 class="modal__title">Are you sure you want to delete this image?</h3>
+          <form class="modal__form" name="delete-form">
+            <button type="submit" class="modal__submit-button">Save</button>
+            <button type="button" class="modal__submit-button">Cancel</button>
+          </form>
+    </div>
     </div>
   </body>
 </html>

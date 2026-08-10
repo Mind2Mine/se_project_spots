@@ -60,7 +60,7 @@ function getCardElement(data) {
   cardDeleteButton.addEventListener("click", () => {
     cardElement.remove();
   });
-
+  console.log("hello");
   api
     .getAppInfo()
     .then(([cards, user]) => {
