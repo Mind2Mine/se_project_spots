@@ -30,6 +30,11 @@
   font-weight: 500;
   box-sizing: border-box;
 }
+.modal__container_type_delete {
+  max-width: 630px;
+  max-height: 172px;
+  padding: 32px 20px;
+}
 .modal__close-button {
   position: absolute;
   top: 32px;
@@ -42,6 +47,11 @@
   padding: 0;
   margin: 0;
   opcaity: 0.4;
+}
+.modal__close-button_type_delete {
+  right: -45px;
+  top: -5px;
+  background-image: url(../images/white_X.svg);
 }
 
 .modal__close-button_type_preview {
@@ -63,11 +73,15 @@
 }
 
 .modal__title {
-  max-width: 169px;
   font-size: 32px;
   color: #212121;
   margin-top: 0;
 }
+.modal__title_type_delete {
+  text-align: center;
+  font-size: 24px;
+}
+
 .modal__caption {
   margin: 0;
   padding: 4px 8px;
@@ -85,6 +99,11 @@
 .modal__form {
   display: flex;
   flex-direction: column;
+}
+.modal__form_type_delete {
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 
 .modal__label {
@@ -129,6 +148,9 @@
   max-width: 156px;
   border: none;
   cursor: pointer;
+}
+.modal__submit-button_red {
+  background-color: #ff0000;
 }
 .modal__button_disabled {
   background-color: #ccc;
