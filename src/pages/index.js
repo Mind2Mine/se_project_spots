@@ -192,7 +192,10 @@ function handleDeleteSubmit(evt) {
       selectedCard.remove();
       closeModal(deleteModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitButton, false, "Deleting...", "Delete");
+    });
 }
 function handleDeleteCard(cardElement, cardId) {
   selectedCard = cardElement;
