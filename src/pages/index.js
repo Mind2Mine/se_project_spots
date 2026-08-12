@@ -173,6 +173,8 @@ deleteModalCloseButton.addEventListener("click", () => {
 
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
+  const submitButton = evt.submitter;
+  setButtonText(submitButton, true);
 
   api
     .editAvatarInfo({ avatar: profileAvatarInput.value })
@@ -180,8 +182,12 @@ function handleAvatarSubmit(evt) {
       profileImageAvatar.src = data.avatar;
       closeModal(avatarModal);
     })
-    .catch(console.error);
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitButton, false);
+    });
 }
+
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
   const submitButton = evt.submitter;
@@ -224,7 +230,8 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-
+  const submitButton = evt.submitter;
+  setButtonText(submitButton, true, "Creating...", "Create");
   const cardData = {
     name: captionInput.value,
     link: linkInput.value,
@@ -237,15 +244,14 @@ function handleAddCardSubmit(evt) {
       cardsList.prepend(cardElement);
 
       evt.target.reset();
-
-      const submitButton = evt.target.querySelector(settings.submitButtonSelector);
-
-      submitButton.disabled = true;
-      submitButton.classList.add(settings.inactiveButtonClass);
-
+      resetValidation(evt.target, settings);
       closeModal(newPostModal);
     })
-    .catch(console.error);
+
+    .catch(console.error)
+    .finally(() => {
+      setButtonText(submitButton, false, "Creating...", "Create");
+    });
 }
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);
 
